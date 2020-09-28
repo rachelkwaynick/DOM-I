@@ -118,3 +118,19 @@ email.textContent = siteContent.contact.email;
 //Update Footer with Correct Content
 const footer = document.querySelector('footer p');
 footer.textContent = siteContent.footer.copyright;
+
+
+// Navigation text to Green
+const navItems = document.querySelectorAll('nav a');
+navItems.forEach(item => item.style.color = 'green');
+
+// Append + Prepend Items to Nav
+const nav = document.querySelector('nav');
+
+let copyOfNavItem1 = navItem1.cloneNode(true);
+copyOfNavItem1.textContent = 'Home'
+nav.prepend(copyOfNavItem1)
+
+let copyOfNavItem2 = navItem2.cloneNode(true);
+copyOfNavItem2.textContent = 'Dog';
+nav.appendChild(copyOfNavItem2)
